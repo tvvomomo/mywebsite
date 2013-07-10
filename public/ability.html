@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Radar Chart</title>
+		<script src="./Chart.js/Chart.js"></script>
+		<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+		<style>
+			canvas{
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" height="450" width="450"></canvas>
+
+
+	<script>
+
+		var radarChartData = {
+			labels : ["HTML","JavaScript","NodeJS","Firebug","Sublime Text2","jQuery","Windows"],
+			datasets : [
+				{
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					data : [70,80,80,50,50,80,80]
+				}
+			]
+			
+		}
+
+	var myRadar = new Chart(document.getElementById("canvas").getContext("2d")).Radar(radarChartData,{scaleShowLabels : false, pointLabelFontSize : 10});
+	
+	</script>
+	</body>
+</html>
