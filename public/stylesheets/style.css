@@ -28,6 +28,7 @@ a {
     min-width: 500px;
     height: 100%;
     float:right;
+    top:0;
     right:0;
 }
 .sidebar .school{
@@ -62,13 +63,17 @@ a:hover{
 }
 .center{
     position: relative;
-    top:30%;
     text-align: center;
 
 }
+
+.center .introduce{
+    padding-top: 50px;
+}
+
 .content .project{
     position: relative;
-    top:50%;
+    top:10%;
 }
 
 .project .blocktext{
@@ -97,12 +102,9 @@ img{
     height: 280px;
 }
 
-.center h1{
-    margin-bottom: 100px;
-}
 
 .center .rainbow{
-    margin-top:100px; 
+    margin-top:80px; 
 }
 
 .content .bttn{
@@ -131,42 +133,42 @@ img{
 }
 
 .col1{
-    background-color: #1abc9c;
+    background-color: #16A085;
     width: 9%;
 }
 .col2{
-    background-color:#f1c40f;
+    background-color: #F39C12;
     width: 9%;
 }
 .col3{
-    background-color: #d35400;
+    background-color: #27AE60;
     width: 9%;
 }
 .col4{
-    background-color: #27ae60;
+    background-color: #D35400;
     width: 9%;
 }
 .col5{
-    background-color: #2ecc71;
+    background-color: #2980B9;
     width: 9%;
 }
 .col6{
-    background-color: #3498db;
+    background-color: #C0392B;
     width: 9%;
 }
 .col7{
-    background-color: #2980b9;
+    background-color: #8E44AD;
     width: 9%;
 }
 .col8{
-    background-color:#e74c3c;
+    background-color:#1ABC9C;
     width: 9%;
 }
 .col9{
-    background-color: #c0392b;
+    background-color: #2ECC71;
     width: 9%;
 }
 .col10{
-    background-color:#9b59b6 ;
+    background-color:#3498DB ;
     width: 9%;
 }
