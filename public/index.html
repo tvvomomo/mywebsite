@@ -8,128 +8,20 @@
     <script type="text/javascript" src="javascripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="javascripts/jquery.zclip.min.js"></script>
     <script type="text/javascript" src="javascripts/Chart.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $('#emailWarn').hide();
-        //$('.col').hide();
-        $('a#email').zclip({
-            path:'javascripts/ZeroClipboard.swf',
-            copy:function(){return "tvvomomo@gmail.com";},        
-            afterCopy:function(){
-                $('#emailWarn').fadeIn();
-            }
-        });
-        var data1 = [{
-            value : 2,color: "#ECF0F1"},{
-            value : 4,color: "#BDC3C7"},{
-            value : 3,color: "#95A5A6"},{
-            value : 1,color: "#34495e"}];
-        var data2 = [{
-            value : 4,color: "#ECF0F1"},{
-            value : 4,color: "#BDC3C7"},{
-            value : 2,color: "#95A5A6"}];
-        var data3 = [{
-            value : 5,color: "#ECF0F1"},{
-            value : 1,color: "#BDC3C7"},{
-            value : 3,color: "#95A5A6"},{
-            value : 1,color: "#34495e"}];
-        var data4 = [{
-            value : 4,color: "#ECF0F1"},{
-            value : 3,color: "#BDC3C7"},{
-            value : 3,color: "#95A5A6"}];
-        var data5 = [{
-            value : 4,color: "#ECF0F1"},{
-            value : 5,color: "#BDC3C7"},{
-            value : 1,color: "#95A5A6"}];
-        var data6 = [{
-            value : 4,color: "#ECF0F1"},{
-            value : 6,color: "#BDC3C7"}];
-        var data7 = [{
-            value : 5,color: "#ECF0F1"},{
-            value : 4,color: "#BDC3C7"},{
-            value : 1,color: "#95A5A6"}];
-        var data8 = [{
-            value : 4,color: "#ECF0F1"},{
-            value : 5,color: "#BDC3C7"},{
-            value : 1,color: "#95A5A6"}];
-        var data9 = [{
-            value : 4,color: "#ECF0F1"},{
-            value : 2,color: "#BDC3C7"},{
-            value : 2,color: "#95A5A6"},{
-            value : 2,color: "#34495e"}];
-        var data10 = [{
-            value : 7,color: "#ECF0F1"},{
-            value : 3,color: "#BDC3C7"}];
-
-        var data = [{
-            value : 8,color: "#16A085"},{
-            value : 6,color: "#F39C12"},{
-            value : 3,color: "#27AE60"},{
-            value : 5,color: "#D35400"},{
-            value : 5,color: "#2980B9"},{
-            value : 4,color: "#C0392B"},{
-            value : 5,color: "#8E44AD"},{
-            value : 6,color: "#1ABC9C"},{
-            value : 5,color: "#2ECC71"},{
-            value : 4,color: "#3498DB"}];
-        var ctx=document.getElementById("col").getContext("2d");
-           
-        var buildChart=function(data){
-            chart=new Chart(ctx).Doughnut(data);
-            return chart;
-        };
-        var chart=buildChart(data);  
-
-        $('div .col1').mouseenter(function(){
-            buildChart(data1);
-        });
-        $('div .col2').mouseenter(function(){
-            buildChart(data2);
-        });
-        $('div .col3').mouseenter(function(){
-            buildChart(data3);
-        });
-        $('div .col4').mouseenter(function(){
-            buildChart(data4);
-        });
-        $('div .col5').mouseenter(function(){
-            buildChart(data5);
-        });
-        $('div .col6').mouseenter(function(){
-            buildChart(data6);
-        });
-        $('div .col7').mouseenter(function(){
-            buildChart(data7);
-        });
-        $('div .col8').mouseenter(function(){
-            buildChart(data8);
-        });
-        $('div .col9').mouseenter(function(){
-            buildChart(data9);
-        });
-        $('div .col10').mouseenter(function(){
-            buildChart(data10);
-        });
-        $('div .bow').mouseleave(function(){
-            buildChart(data);
-        });
-
-    });
-
-
-    </script>
-    <style>
-    #emailWarn{
-        float:right;
+    <script type="text/javascript" src="javascripts/custom.js"></script>
+    <style type="text/css">
+    .blocktext p{
         line-height: 1.5;
-        margin-top: 20px;
+        padding-left: 2px;
+        color:#34495e;         
     }
-    .cans{
-        padding: 50px;
-        position: static;
+    .blocktext h4{
+        line-height: 1;
+        padding-bottom: 8px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #2980b9;
     }
     </style>
-
 </head>
 
 <body>
@@ -158,20 +50,20 @@
                     </div>
                     <div class="rainbow">
                         <div class="bow col1">
-                            <p>编程语言</p>
+                            <p>Language</p>
                             <p class="small">C/C++</p>
                             <p class="small">Java</p>
                             <p class="small">JavaScript</p>
                             <p class="small">Python</p>
                         </div>
                         <div class="bow col2">
-                            <p>切页面</p>
+                            <p>Basic Skill</p>
                             <p class="small">HTML</p>
                             <p class="small">CSS</p>
                             <p class="small">Photoshop</p>
                         </div>
                         <div class="bow col3">
-                            <p>浏览器兼容性</p>
+                            <p>Browser</p>
                             <p class="small">Chrome</p>
                             <p class="small">Safari</p>
                             <p class="small">Firefox</p>
@@ -184,37 +76,37 @@
                             <p class="small">Eclipse</p>
                         </div>
                         <div class="bow col5">
-                            <p>调试工具</p>
+                            <p>Debug Tools</p>
                             <p class="small">Firebug</p>
                             <p class="small">Chrome DTools</p>
                             <p class="small">Inspector</p>
                         </div>
                         <div class="bow col6">
-                            <p>版本管理</p>
+                            <p>Version Control</p>
                             <p class="small">Git</p>
                             <p class="small">Github</p>
                         </div>
                         <div class="bow col7">
-                            <p>前端库</p>
+                            <p>Front-end Framework</p>
                             <p class="small">BootStrap</p>
                             <p class="small">jQuery</p>
                             <p class="small">YUI</p>
                         </div>
                         <div class="bow col8">
-                            <p>后台语言</p>
+                            <p>Server-side</p>
                             <p class="small">Node.js</p>
                             <p class="small">Java</p>
                             <p class="small">Python</p>
                         </div>    
                         <div class="bow col9">
-                            <p>后台框架</p>
+                            <p>Web App Framework</p>
                             <p class="small">Strust2</p>
                             <p class="small">Spring</p>
                             <p class="small">Hibernate</p>
                             <p class="small">Express</p>
                         </div>
                         <div class="bow col10">
-                            <p>数据库</p>
+                            <p>Database</p>
                             <p class="small">MySQL</p>
                             <p class="small">MongoDB</p>
                         </div>                                                                     
@@ -222,31 +114,40 @@
                 </div>
 
                 <div class="project">
-                    <hr>
-                    <div>
-                        <div class="blocktext">
-                            <h4>Tumblr themes</h4>
-                            <p>Begin to learn the front end development technology using HTML5, CSS and JavaScript.</p>
-                        </div>
-                        <div class="blocktext">
-                            <h4>Model driven software development</h4>
-                            <p>Model driven software development based on dependability standards. Major in the transition from the PIM(platform independent model) to the PSM(platform specific model), and the establishment of  meta model in Eclipse using the eclipse modeling framework plugin .</p>
-                        </div>
-                        <div class="blocktext">
-                            <h4>Online booking system</h4>
-                            <p>Cinema ticketing system and online booking system. Responsible for the data synchronization between front to end, and the development of online booking website.Gained the ability of building the Java framework in spring, struts and hibernate, using of HTML, CSS and Jsp, and operating of database like MySQL.</p>
-                        </div> 
-                    </div>      
-                    <div class="blockpic">
-                        <div class="inline">
-                            <img src="images/project1.jpg"/>
-                        </div>
-                        <div class="inline">
-                            <h4>Tickets Management Office in Beijing Rail Transit Command Center Consultant assistant</h4>
-                            <p>Fulfilled the requirement analysis of the tickets’ information management system, the automated storehouse, the tickets exhibition room and the tickets system process standard in leading a team with five students from BUAA. Accomplished independently the research, requirement analysis, preliminary design and detailed design about the test center system of AFC.</p>
-                            <p><a class="bttn" href="#">Download Src</a></p>
-                        </div>
+
+                    <div class="blocktext">
+                        <h4>Model driven software development</h4>
+                        <p>Model driven software development based on dependability standards. Major in the transition from the PIM(platform independent model) to the PSM(platform specific model), and the establishment of  meta model in Eclipse using the eclipse modeling framework plugin .</p>
                     </div>
+                    <div class="blocktext">
+                        <h4>Online booking system</h4>
+                        <p>Cinema ticketing system and online booking system. Responsible for the data synchronization between front to end, and the development of online booking website.Gained the ability of building the Java framework in spring, struts and hibernate, using of HTML, CSS and Jsp, and operating of database like MySQL.</p>
+                    </div> 
+
+                    <div class="blocktext">
+                        <h4>Intership</h4>
+                        <p>Tickets Management Office in Beijing Rail Transit Command Center Consultant assistant. Fulfilled the requirement analysis of the tickets’ information management system, the automated storehouse, the tickets exhibition room and the tickets system process standard in leading a team with five students from BUAA. Accomplished independently the research, requirement analysis, preliminary design and detailed design about the test center system of AFC.</p>
+                    </div>
+                    <div class="blocktext">
+                        <h4>Tumblr themes</h4>
+                        <p>Begin to learn the front end development technology using HTML5, CSS and JavaScript, and it is ugly!</p>
+                        <p><a class="bttn" href="http://mrmotest.tumblr.com/">View Layout</a><p>
+                    </div>
+
+                    <div class="blocktext">
+                        <h4>Faculty Students Union</h4>
+                        <p>Responsible for the propaganda work of all activities in the students union. Gain the ability of designing poster and using of photoshop software.</p>
+                    </div>
+                    <div class="blocktext">
+                        <h4>Chrome Extensions For Weibo</h4>
+                        <p>Sina Weibo is too ugly and confuse to use, so I developed a extension to clear ads. and unimportant views, also it improved my CSS skills and known how to develop a chrome extension.</p>
+                        <p><a class="bttn" href="CSS.crx">Download Src</a><p>
+                    </div> 
+                    <div class="blocktext">
+                        <h4>Regression Testing Tool</h4>
+                        <p>Develop a regression testing management tool for Beijing Rail Transit Command Center, using Sybase, Strust2+Spring+Hibernate and Java. I used jQuery, Bootstrap in front, and clustering algorithm and a set of AFC regression testing theory to origanize the regression test cases in back.</p>
+                    </div>       
+
 
                 </div>           
             </div>
