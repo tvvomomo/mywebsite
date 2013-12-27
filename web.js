@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -8,6 +7,77 @@ var newrelic = require('newrelic')
   , routes = require('./routes')
   , http = require('http')
   , path = require('path');
+
+var Blitz = require('blitz');
+ 
+var email = "mayue617@gmail.com,
+    apiKey = "aqbcdge-sjfkgurti-sjdhgft-skdiues",
+    myWebsite = "http://young-citadel-1394.herokuapp.com/",
+    blitz= new Blitz(email, apiKey);
+ 
+// Run a sprint
+blitz.sprint({
+    steps: [{url: myWebsite}],
+    region: 'california'
+}).on('status', function (data) {
+    // do something...
+}).on('complete', function (data) {
+    console.log('region: ' + data.region);
+    console.log('duration: ' + data.duration);
+    var steps = data.steps;
+    for(var i in steps) {
+        var step = steps[i];
+        console.log("> Step " + i);
+        console.log("\tstatus: " + step.response.status);
+        console.log("\tduration: " + step.duration);
+        console.log("\tconnect: " + step.connect);
+    }
+}).on('error', function (response) {
+    console.log("error: " + response.error);    
+    console.log("reason: " + response.reason);
+});
+ 
+// Run a rush
+blitz.rush({
+    steps: [{url: myWebsite}],
+    region: 'california',
+    pattern: { intervals: [{start: 1, end: 10, duration: 30}]}
+}).on('status', function (data) {
+    // do something...
+}).on('complete', function (data) {
+    console.log('region: ' + data.region);
+    console.log('duration: ' + data.duration);
+    var steps = data.steps;
+    for(var i in steps) {
+        var step = steps[i];
+        console.log("> Step " + i);
+        console.log("\tstatus: " + step.response.status);
+        console.log("\tduration: " + step.duration);
+        console.log("\tconnect: " + step.connect);
+    }
+}).on('error', function (response) {
+    console.log("error: " + response.error);    
+    console.log("reason: " + response.reason);
+});
+ 
+//Run a sprint or rush using the command parser
+blitz.execute('-r ireland http://example.com').on('status', function (data) {
+    // do something...
+}).on('complete', function (data) {
+    console.log('region: ' + data.region);
+    console.log('duration: ' + data.duration);
+    var steps = data.steps;
+    for(var i in steps) {
+        var step = steps[i];
+        console.log("> Step " + i);
+        console.log("\tstatus: " + step.response.status);
+        console.log("\tduration: " + step.duration);
+        console.log("\tconnect: " + step.connect);
+    }
+}).on('error', function (response) {
+    console.log("error: " + response.error);	
+    console.log("reason: " + response.reason);
+});
 
 var app = express();
 
