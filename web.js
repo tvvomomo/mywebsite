@@ -10,8 +10,8 @@ var newrelic = require('newrelic')
 
 var Blitz = require('blitz');
  
-var email = "mayue617@gmail.com,
-    apiKey = "aqbcdge-sjfkgurti-sjdhgft-skdiues",
+var email = "mayue617@gmail.com",
+    apiKey = "f235a911-c1f76406-fd741a3a-636e9253",
     myWebsite = "http://young-citadel-1394.herokuapp.com/",
     blitz= new Blitz(email, apiKey);
  
